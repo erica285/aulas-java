@@ -1,0 +1,14 @@
+<p>&nbsp;</p>
+<div class = "container alert alert-info">
+<h1 class = "display-4"> My Heroes</h1>
+
+<ul class = "list-heroes">
+        <p>&nbsp;</p>
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+        <span>{{hero.id}}</span>
+        {{hero.name}}
+    </li>
+</ul>
+</div>
+
+<app-heroes-detail [hero] = "selectedHero"></app-heroes-detail>
